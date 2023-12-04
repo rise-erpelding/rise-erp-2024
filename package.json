@@ -1,0 +1,19 @@
+{
+  "name": "new site",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "version": "1.0.0",
+  "description": "new site",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build style.scss",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rise Erpelding",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.3",
+    "parcel": "latest"
+  }
+}
