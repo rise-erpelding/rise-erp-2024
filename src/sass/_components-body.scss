@@ -1,0 +1,11 @@
+@use "./settings" as settings;
+
+.body {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: settings.$medium-breakpoint) {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}

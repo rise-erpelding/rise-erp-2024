@@ -1,0 +1,52 @@
+@use "./settings" as settings;
+
+.right {
+  background-color: mediumpurple;
+  padding: 0 1rem;
+  // flex: 1;
+  flex-basis: auto;
+  box-sizing: border-box;
+
+  @media (min-width: settings.$medium-breakpoint) {
+    // 100% minus flex-basis for .left minus gap
+    flex-basis: calc(100% - 16rem - 1rem);
+  }
+}
+
+// right container elements
+.section {
+  @media (min-width: settings.$medium-breakpoint) {
+    height: 100vh;
+  }
+}
+
+.about {
+  background-color: lightskyblue;
+}
+
+.experience {
+  background-color: lightsalmon;
+}
+
+.projects {
+  background-color: palegreen;
+}
+
+.contact {
+  margin-top: 1rem;
+  background-color: lemonchiffon;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  & a {
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  &__icon {
+    width: 1.2rem;
+    color: black;
+  }
+}

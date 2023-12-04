@@ -65,7 +65,9 @@
 // 6. Components
 //    Specific UI components. This is where majority of our work takes place
 //    and our UI components are often composed of Objects and Components
-@forward './components';
+@forward './components-body';
+@forward './components-left';
+@forward './components-right';
 
 // =====================================================================
 // 7. Vendors

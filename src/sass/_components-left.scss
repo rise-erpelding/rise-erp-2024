@@ -1,0 +1,44 @@
+@use "./settings" as settings;
+
+.left {
+  background-color: violet;
+  // padding: 0 1rem;
+  position: relative;
+  // width: 50%;
+  flex-basis: auto;
+  box-sizing: border-box;
+
+  @media (min-width: settings.$medium-breakpoint) {
+    flex-basis: 16rem;
+  }
+}
+
+// left container elements
+.header {
+  text-align: center;
+  box-sizing: border-box;
+  
+  @media (min-width: settings.$medium-breakpoint) {
+    position: fixed;
+    width: 16rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.navigation {
+  &__list {
+    padding: 0;
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    justify-content: center;
+
+    @media (min-width: settings.$medium-breakpoint) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+  }
+}
