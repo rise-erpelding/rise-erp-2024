@@ -1,1 +1,39 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --text-color: #09203f;
+  --light-border: #e8e8e8;
+  --medium-background: whitesmoke;
+  --medium-primary:  #283c86; // primary gradient color
+  --faded-primary:  #315B73; // less extreme gradient color
+  --solid-primary: #2F5676; // for github icon in footer
+  --solid-primary-secondary: #376F67; // for linkedin icon in footer, combination of solid-primary and solid-secondary
+  --solid-secondary: #3E8957; // for envelope icon in footer
+  --medium-secondary:  #45a247;
+  --faded-secondary: #397960;
+  --medium-gradient: to left, var(--medium-secondary), var(--medium-primary); // colorful gradient, used in links
+  --faded-medium-gradient: to left, var(--faded-secondary), var(--medium-primary); // less obvious gradient, used in footer
+  --hero-text-gradient: to right, var(--faded-secondary), var(--medium-primary);
+}
+
+@mixin text-gradient($gradient) {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient($gradient);
+  -webkit-background-clip: text;
+}
+
+@mixin hero-gradient {
+  background: $medium-primary;
+  background: -webkit-linear-gradient($hero-text-gradient);
+  background: linear-gradient($hero-text-gradient);
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
 $medium-breakpoint: 800px;

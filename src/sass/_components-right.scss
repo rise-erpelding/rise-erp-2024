@@ -35,22 +35,3 @@
 .projects {
   background-color: palegreen;
 }
-
-.contact {
-  margin-top: 1rem;
-  background-color: lemonchiffon;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-
-  & a {
-    text-decoration: none;
-    display: inline-block;
-  }
-
-  &__icon {
-    width: 1.2rem;
-    color: black;
-  }
-}
