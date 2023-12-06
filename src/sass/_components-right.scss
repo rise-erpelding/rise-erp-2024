@@ -1,27 +1,55 @@
 @use "./settings" as settings;
 
+// 100% minus flex-basis for .left minus gap
+$medium-bp-right-space: calc(100% - #{settings.$medium-bp-left-width} - 1rem);
+
 .right {
-  background-color: mediumpurple;
+  // background-color: azure;
   padding: 0 1rem;
-  // flex: 1;
   flex-basis: auto;
   box-sizing: border-box;
 
   @media (min-width: settings.$medium-breakpoint) {
-    // 100% minus flex-basis for .left minus gap
-    flex-basis: calc(100% - 16rem - 1rem);
+    flex-basis: $medium-bp-right-space;
   }
 }
 
 // right container elements
 .section {
+  height: 100vh;
+
   @media (min-width: settings.$medium-breakpoint) {
     height: 100vh;
+    @include settings.width-limiter(calc(100% - 2rem), 60rem); // take this off if we end up setting a different one for every section, but I feel like we wouldn't?
   }
 }
 
 .hero {
-  background-color: violet;
+  position: relative;
+  text-align: center;
+  // background-color: gainsboro;
+  height: calc(100vh - #{settings.$small-bp-left-height});
+  @include settings.width-limiter(calc(100vw - 2rem), 30rem); // this one has a smaller width than other sections
+
+  @media (min-width: settings.$medium-breakpoint) {
+    text-align: left;
+    height: 100vh;
+    @include settings.width-limiter(calc(100% - 4rem), 60rem);
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2rem;
+    line-height: 1.25;
+
+    &--gradient {
+      @include settings.text-gradient(var(--hero-text-gradient));
+    }
+  }
 }
 
 .about {

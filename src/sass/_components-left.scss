@@ -1,23 +1,25 @@
 @use "./settings" as settings;
 
 .left {
-  background-color: azure;
+  // background-color: azure;
   position: relative;
   flex-basis: auto;
   box-sizing: border-box;
 
   @media (min-width: settings.$medium-breakpoint) {
-    flex-basis: 16rem;
+    flex-basis: settings.$medium-bp-left-width;
   }
 }
 
 // left container elements
 .header {
+  margin-top: 3rem;
   text-align: center;
   box-sizing: border-box;
   color: var(--text-color);
   
   @media (min-width: settings.$medium-breakpoint) {
+    margin-top: 0;
     position: fixed;
     width: 16rem;
     top: 50%;
@@ -33,7 +35,7 @@
 .title {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 2.5rem;
-  color: green;
+  line-height: 50px;
   @include settings.text-gradient(var(--hero-text-gradient));
 }
 
@@ -43,10 +45,13 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  line-height: 1;
 
   & a {
     text-decoration: none;
     display: inline-block;
+    vertical-align: middle;
+    height: 25px;
   }
 
   &__icon {
@@ -76,6 +81,7 @@
     list-style: none;
     gap: 0.875rem;
     justify-content: center;
+    line-height: 25px;
 
     @media (min-width: settings.$medium-breakpoint) {
       flex-direction: column;

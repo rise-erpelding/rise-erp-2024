@@ -36,4 +36,11 @@
   -moz-text-fill-color: transparent;
 }
 
+@mixin width-limiter($smaller-max-width, $max-width) {
+  width: min($smaller-max-width, $max-width);
+	margin-inline: auto;
+}
+
 $medium-breakpoint: 800px;
+$medium-bp-left-width: 16rem;
+$small-bp-left-height: calc(3rem + 50px + 4rem + 25px + 1rem + 25px); // top margin, title, contact margin, contact items, nav margin, nav items // 228px
