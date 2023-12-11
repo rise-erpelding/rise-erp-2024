@@ -16,7 +16,9 @@ $medium-bp-right-space: calc(100% - #{settings.$medium-bp-left-width} - 1rem);
 
 // right container elements
 .section {
-  height: 100vh;
+  // min-height: 100vh;
+  padding: 1rem 0;
+  box-sizing: border-box;
 
   & h2 {
     font-family: 'Roboto Condensed', sans-serif;
@@ -24,14 +26,15 @@ $medium-bp-right-space: calc(100% - #{settings.$medium-bp-left-width} - 1rem);
     color: var(--text-color);
   }
 
-  & p {
+  & p,
+  li {
     font-family: 'Cabin', sans-serif;
     color: var(--text-color);
     line-height: 1.5;
   }
 
   @media (min-width: settings.$medium-breakpoint) {
-    height: 100vh;
+    min-height: 100vh;
     @include settings.width-limiter(calc(100% - 4rem), 60rem); // take this off if we end up setting a different one for every section, but I feel like we wouldn't?
   }
 }
@@ -62,55 +65,24 @@ $medium-bp-right-space: calc(100% - #{settings.$medium-bp-left-width} - 1rem);
 }
 
 .about {
-  background-color: lightskyblue;
+  background-color: ghostwhite;
+
+  &__picture {
+    display: block;
+    padding: 0 1rem 0.5rem 0;
+    float: left;
+
+    & img {
+      width: 115px;
+
+      @media (min-width: settings.$medium-breakpoint) {
+        width: 135px;
+      }
+    }
+  }
 
   &__content-container {
     margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    @media (min-width: settings.$medium-breakpoint) {
-      flex-direction: row;
-    }
-  }
-
-  &__img-container {
-    // flex-basis: 10%;
-
-    @media (min-width: settings.$medium-breakpoint) {
-      // flex-basis: 40%;
-    }
-
-    & img {
-      width: 100%;
-    //   // width: auto;
-    //   // max-height: 300px;
-    //   display: block;
-
-    //   @media (min-width: settings.$medium-breakpoint) {
-    //     // max-width: 100%;
-    //     // height: auto;
-    //   }
-    }
-  }
-
-  &__picture {
-    width: 100px;
-    display: block;
-  }
-
-  &__text-container {
-    // flex-basis: 90%;
-    font-size: 1rem;
-
-    @media (min-width: settings.$medium-breakpoint) {
-      // flex-basis: 60%;
-    }
-
-    & p:first-child {
-      margin-top: 0;
-    }
   }
 
   // kinda silly but it changes text to explain the location of the links depending on orientation
