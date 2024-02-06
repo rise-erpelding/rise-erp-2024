@@ -12,7 +12,7 @@
   --medium-secondary:  #45a247;
   --faded-secondary: #397960;
   --medium-gradient: to left, var(--medium-secondary), var(--medium-primary); // colorful gradient, used in links
-  --faded-medium-gradient: to left, var(--faded-secondary), var(--medium-primary); // less obvious gradient, used in footer
+  --faded-medium-gradient: to left, var(--faded-secondary), var(--medium-primary); // less obvious gradient
   --hero-text-gradient: to right, var(--faded-secondary), var(--medium-primary);
 }
 

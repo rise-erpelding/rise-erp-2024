@@ -20,10 +20,15 @@ $medium-bp-right-space: calc(100% - #{settings.$medium-bp-left-width} - 1rem);
   padding: 1rem 0;
   box-sizing: border-box;
 
-  & h2 {
+  & h2,
+  h3 {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 2rem;
     color: var(--text-color);
+  }
+
+  & h3 {
+    font-size: 1.5rem;
   }
 
   & p,
@@ -97,7 +102,61 @@ $medium-bp-right-space: calc(100% - #{settings.$medium-bp-left-width} - 1rem);
 }
 
 .experience {
-  background-color: lightsalmon;
+  background-color: gainsboro;
+
+  &__description-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__description-list-item {
+    margin: 0 0 1rem;
+
+    &--with-border {
+      border: 1px solid black;
+      border-radius: 1.25rem;
+      padding: 0.75rem 1rem;
+    }
+  }
+
+  &__description-paragraph {
+    margin: 0 0 0.75rem;
+  }
+
+  &__tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.25rem 0;
+  }
+
+  &__tech-list-item {
+    // this isn't being used but in case there is a tech that doesn't have a logo we can make styled text
+    &--no-logo {
+      display: inline-block;
+      color: white;
+      background: var(--medium-primary);
+      background: linear-gradient(var(--faded-medium-gradient));
+      font-size: 0.875rem;
+      padding: 3px 12px;
+      border-radius: 20px;
+
+      margin-right: 0.5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &--logo {
+      display: inline-block;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 .projects {
