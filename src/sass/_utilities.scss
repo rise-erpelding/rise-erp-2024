@@ -1,3 +1,9 @@
+@use "./settings" as settings;
+
 .no-margin {
   margin: 0;
+}
+
+.delist {
+  @include settings.delist;
 }

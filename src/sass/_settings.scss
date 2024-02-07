@@ -3,7 +3,7 @@
   --white: #ffffff;
   --text-color: #09203f;
   --light-border: #e8e8e8;
-  --medium-background: whitesmoke;
+  --medium-background: whitesmoke; // #f5f5f5
   --medium-primary:  #283c86; // primary gradient color
   --faded-primary:  #315B73; // less extreme gradient color
   --solid-primary: #2F5676; // for github icon in footer
@@ -24,9 +24,9 @@
 }
 
 @mixin hero-gradient {
-  background: $medium-primary;
-  background: -webkit-linear-gradient($hero-text-gradient);
-  background: linear-gradient($hero-text-gradient);
+  background: var(--medium-primary);
+  background: -webkit-linear-gradient(var(--hero-text-gradient));
+  background: linear-gradient(var(--hero-text-gradient));
   background-size: 100%;
   background-repeat: repeat;
   background-clip: text;
@@ -39,6 +39,11 @@
 @mixin width-limiter($smaller-max-width, $max-width) {
   width: min($smaller-max-width, $max-width);
 	margin-inline: auto;
+}
+
+@mixin delist { // also used in util class
+  list-style: none;
+  padding: 0;
 }
 
 $medium-breakpoint: 800px;

@@ -122,24 +122,102 @@ $medium-bp-right-space: calc(100% - #{settings.$medium-bp-left-width} - 1rem);
   &__description-paragraph {
     margin: 0 0 0.75rem;
   }
+}
 
-  &__tech-list {
-    list-style: none;
-    padding: 0;
-    margin: 0.25rem 0;
+.projects {
+  background-color: white;
+
+  &__project-list {
+    @include settings.delist;
   }
 
-  &__tech-list-item {
-    // this isn't being used but in case there is a tech that doesn't have a logo we can make styled text
-    &--no-logo {
+  &__project-list-item {
+    margin: 2rem;
+    -webkit-box-shadow: 5px 5px 28px 5px rgba(black, 0.1);
+    -moz-box-shadow: 5px 5px 28px 5px rgba(black, 0.1);
+    box-shadow: 5px 5px 28px 5px rgba(black, 0.1);
+    border: 1px solid var(--light-border);
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
+
+    &--left {
+      padding: 2rem;
+      background: var(--white);
+      flex-basis: 100%;
+    }
+
+    &--right {
+      padding: 2rem;
+      background: var(--medium-background);
+      text-align: center; // align img
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  &__link-list {
+    @include settings.delist;
+    margin: 0.5rem 0;
+  }
+
+  &__link-list-item {
+    display: inline-block;
+
+    &:not(:last-child)::after {
+      content: " | ";
+    }
+
+    > a {
+      color: inherit;
+
+      &:hover {
+        @include settings.hero-gradient;
+        transition: 0.2s ease-in;
+      }
+    }
+  }
+
+  &__gif {
+    width: 100%;
+    
+    &--mobile {
+
+      @media screen and (min-width: 1200px) {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @media screen and (min-width: 1200px) {
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+// used in multiple sections
+.tech-list {
+  @include settings.delist;
+  margin: 0.25rem 0;
+
+  &__item {
+    &--no-logo { // this isn't being used but in case there is a tech that doesn't have a logo we can make styled text
       display: inline-block;
-      color: white;
+      color: var(--white);
       background: var(--medium-primary);
       background: linear-gradient(var(--faded-medium-gradient));
       font-size: 0.875rem;
       padding: 3px 12px;
       border-radius: 20px;
-
       margin-right: 0.5rem;
 
       &:last-child {
@@ -159,6 +237,6 @@ $medium-bp-right-space: calc(100% - #{settings.$medium-bp-left-width} - 1rem);
   }
 }
 
-.projects {
-  background-color: palegreen;
+.description-paragraph {
+  margin: 0 0 0.75rem;
 }
