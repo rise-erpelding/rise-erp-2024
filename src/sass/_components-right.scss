@@ -4,7 +4,6 @@
 $medium-bp-right-space: calc(100% - #{settings.$medium-bp-left-width} - 1rem);
 
 .right {
-  background-color: azure;
   padding: 0 1rem;
   flex-basis: auto;
   box-sizing: border-box;
@@ -47,7 +46,6 @@ $medium-bp-right-space: calc(100% - #{settings.$medium-bp-left-width} - 1rem);
 .hero {
   position: relative;
   text-align: center;
-  background-color: gainsboro;
   height: calc(100vh - #{settings.$small-bp-left-height});
   @include settings.width-limiter(calc(100vw - 2rem), 30rem); // this one has a smaller width than other sections
 
@@ -70,7 +68,6 @@ $medium-bp-right-space: calc(100% - #{settings.$medium-bp-left-width} - 1rem);
 }
 
 .about {
-  background-color: ghostwhite;
 
   &__picture {
     display: block;
@@ -102,7 +99,6 @@ $medium-bp-right-space: calc(100% - #{settings.$medium-bp-left-width} - 1rem);
 }
 
 .experience {
-  background-color: gainsboro;
 
   &__description-list {
     list-style: none;
