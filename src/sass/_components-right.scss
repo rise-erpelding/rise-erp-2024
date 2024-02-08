@@ -19,11 +19,15 @@ $medium-bp-right-space: calc(100% - #{settings.$medium-bp-left-width} - 1rem);
   padding: 1rem 0;
   box-sizing: border-box;
 
+  &__heading {
+    @include settings.text-gradient(var(--faded-medium-gradient));
+    display: inline-block; // makes the gradient more gradient
+  }
+
   & h2,
   h3 {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 2rem;
-    color: var(--text-color);
   }
 
   & h3 {
@@ -56,6 +60,7 @@ $medium-bp-right-space: calc(100% - #{settings.$medium-bp-left-width} - 1rem);
   }
 
   &__text {
+    color: var(--text-color);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
