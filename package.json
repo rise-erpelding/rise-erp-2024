@@ -3,11 +3,10 @@
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "version": "1.0.0",
-  "description": "new site",
-  "main": "index.js",
+  "description": "Rise's Portfolio Website",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build style.scss",
+    "build": "parcel build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rise Erpelding",
