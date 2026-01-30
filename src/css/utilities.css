@@ -1,0 +1,10 @@
+@layer utilities {
+  .no-margin {
+    margin: 0;
+  }
+
+  .delist {
+    list-style: none;
+    padding: 0;
+  }
+}
