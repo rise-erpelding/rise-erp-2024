@@ -1,0 +1,270 @@
+@layer components {
+  .right {
+    padding: 0 1rem;
+    flex-basis: auto;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 800px) {
+    .right {
+      /* 100% minus flex-basis for .left minus gap */
+      flex-basis: calc(100% - var(--medium-bp-left-width) - 1rem);
+    }
+  }
+
+  /* right container elements */
+  .section {
+    padding: 1rem 0;
+    box-sizing: border-box;
+  }
+
+  .section__heading {
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(var(--faded-medium-gradient));
+    -webkit-background-clip: text;
+    display: inline-block; /* makes the gradient more gradient */
+  }
+
+  .section h2,
+  .section h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2rem;
+  }
+
+  .section h3 {
+    font-size: 1.5rem;
+  }
+
+  .section p,
+  .section li {
+    font-family: 'Cabin', sans-serif;
+    color: var(--text-color);
+    line-height: 1.5;
+  }
+
+  @media (min-width: 800px) {
+    .section {
+      min-height: 100vh;
+      width: min(calc(100% - 4rem), 60rem);
+      margin-inline: auto;
+    }
+  }
+
+  .hero {
+    position: relative;
+    text-align: center;
+    height: calc(100vh - var(--small-bp-left-height));
+    width: min(calc(100vw - 2rem), 30rem); /* this one has a smaller width than other sections */
+    margin-inline: auto;
+  }
+
+  @media (min-width: 800px) {
+    .hero {
+      text-align: left;
+      height: 100vh;
+      width: min(calc(100% - 4rem), 60rem);
+    }
+  }
+
+  .hero__text {
+    color: var(--text-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1.25;
+  }
+
+  .hero__text--gradient {
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(var(--hero-text-gradient));
+    -webkit-background-clip: text;
+  }
+
+  .about__picture {
+    display: block;
+    padding: 0 1rem 0.5rem 0;
+    float: left;
+  }
+
+  .about__picture img {
+    width: 115px;
+  }
+
+  @media (min-width: 800px) {
+    .about__picture img {
+      width: 135px;
+    }
+  }
+
+  .about__content-container {
+    margin-top: 2rem;
+  }
+
+  /* kinda silly but it changes text to explain the location of the links depending on orientation */
+  /* still makes sense if left out */
+  .about__links::before {
+    content: " above";
+  }
+
+  @media (min-width: 800px) {
+    .about__links::before {
+      content: " to the left";
+    }
+  }
+
+  .experience__description-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .experience__description-list-item {
+    margin: 0 0 1rem;
+  }
+
+  .experience__description-list-item--with-border {
+    border: 1px solid black;
+    border-radius: 1.25rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .experience__description-paragraph {
+    margin: 0 0 0.75rem;
+  }
+
+  .projects {
+    background-color: white;
+  }
+
+  .projects__project-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .projects__project-list-item {
+    margin: 2rem;
+    -webkit-box-shadow: 5px 5px 28px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 5px 5px 28px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 28px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--light-border);
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 1200px) {
+    .projects__project-list-item {
+      flex-direction: row;
+    }
+  }
+
+  .projects__project-list-item--left {
+    padding: 2rem;
+    background: var(--white);
+    flex-basis: 100%;
+  }
+
+  .projects__project-list-item--right {
+    padding: 2rem;
+    background: var(--medium-background);
+    text-align: center; /* align img */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .projects__link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+  }
+
+  .projects__link-list-item {
+    display: inline-block;
+  }
+
+  .projects__link-list-item:not(:last-child)::after {
+    content: " | ";
+  }
+
+  .projects__link-list-item > a {
+    color: inherit;
+  }
+
+  .projects__link-list-item > a:hover {
+    background: var(--medium-primary);
+    background: -webkit-linear-gradient(var(--hero-text-gradient));
+    background: linear-gradient(var(--hero-text-gradient));
+    background-size: 100%;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    transition: 0.2s ease-in;
+  }
+
+  .projects__gif {
+    width: 100%;
+  }
+
+  .projects__gif--mobile {
+    /* shown by default */
+  }
+
+  @media screen and (min-width: 1200px) {
+    .projects__gif--mobile {
+      display: none;
+    }
+  }
+
+  .projects__gif--desktop {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    .projects__gif--desktop {
+      display: block;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  /* used in multiple sections */
+  .tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.25rem 0;
+  }
+
+  .tech-list__item--no-logo {
+    /* this isn't being used but in case there is a tech that doesn't have a logo we can make styled text */
+    display: inline-block;
+    color: var(--white);
+    background: var(--medium-primary);
+    background: linear-gradient(var(--faded-medium-gradient));
+    font-size: 0.875rem;
+    padding: 3px 12px;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+  }
+
+  .tech-list__item--no-logo:last-child {
+    margin-right: 0;
+  }
+
+  .tech-list__item--logo {
+    display: inline-block;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+
+  .tech-list__item--logo:last-child {
+    margin-right: 0;
+  }
+
+  .description-paragraph {
+    margin: 0 0 0.75rem;
+  }
+}

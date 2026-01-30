@@ -1,0 +1,11 @@
+@layer elements {
+  body {
+    margin: 0;
+  }
+
+  /* smooth scrolling */
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+}
