@@ -18,5 +18,6 @@
   /* Breakpoints and layout (converted from Sass variables) */
   --medium-breakpoint: 800px;
   --medium-bp-left-width: 16rem;
+  --medium-bp-inline-spacing: 1.5rem;
   --small-bp-left-height: calc(3rem + 50px + 4rem + 25px + 1rem + 25px); /* top margin, title, contact margin, contact items, nav margin, nav items // 228px */
 }
