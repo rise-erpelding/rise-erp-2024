@@ -1,0 +1,41 @@
+/*
+ * Vendored from rising-depth/tokens/portfolio.theme.css — that's the
+ * canonical copy, kept there (rather than only here) so it's visible
+ * alongside the rest of the shared system as a worked example of what a
+ * theme file looks like. Edit there and re-copy.
+ *
+ * Portfolio theme (semantic tier)
+ *
+ * Maps the shared component contracts' required tokens onto this
+ * project's own visual identity. This file is specific to the
+ * rise-erp-2024 portfolio and is not meant to be reused as-is by another
+ * project — a different project gets its own theme file, mapping the same
+ * semantic token *names* to its own values (that's what makes the split
+ * work — see contracts/button.md for the token list this depends on).
+ *
+ * Colors here intentionally reference the portfolio's own existing brand
+ * variables (--medium-primary, --white, etc. — defined in that project's
+ * settings.css) rather than inventing new ones. Brand color is owned by
+ * the project, not by this shared system. Spacing/radius/font-size come
+ * from tokens/foundation.css, which this project also imports.
+ *
+ * Load order requirement: this file must be imported after both
+ * foundation.css and the project's own settings.css, since it references
+ * custom properties defined in each.
+ */
+
+:root {
+  --button-bg: var(--medium-primary);
+  --button-fg: var(--white);
+  --button-bg-hover: var(--faded-primary);
+
+  --button-padding-x: var(--space-5);
+  --button-padding-y: var(--space-3);
+  --button-radius: var(--radius-md);
+  --button-font-size: var(--font-size-3);
+
+  --button-secondary-bg: transparent;
+  --button-secondary-fg: var(--medium-primary);
+  --button-secondary-border-color: var(--medium-primary);
+  --button-secondary-bg-hover: var(--medium-background);
+}

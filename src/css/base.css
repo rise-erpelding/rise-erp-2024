@@ -26,8 +26,18 @@
  * 1. Settings
  *    Global CSS custom properties (colors, spacing, breakpoints).
  *    No selectors generated - just variable definitions.
+ *
+ *    foundation.css and portfolio-theme.css are vendored from the
+ *    rising-depth shared component system (see that repo's plan.md and
+ *    docs/ for why). foundation.css holds generic scale primitives;
+ *    portfolio-theme.css maps shared component tokens (currently just
+ *    Button's) onto this project's own colors defined below in
+ *    settings.css. Load order matters here: portfolio-theme.css
+ *    references custom properties from both files, so it must come last.
  */
+@import "./foundation.css" layer(settings);
 @import "./settings.css" layer(settings);
+@import "./portfolio-theme.css" layer(settings);
 
 /* =====================================================================
  * 2. Tools
@@ -57,7 +67,11 @@
  * 6. Components
  *    Specific UI components. This is where majority of our work takes place
  *    and our UI components are often composed of Objects and Components.
+ *
+ *    button.css is vendored from rising-depth/styles/button.css — see the
+ *    note in section 1 above about where its tokens come from.
  */
+@import "./button.css" layer(components);
 @import "./components-body.css" layer(components);
 @import "./components-left.css" layer(components);
 @import "./components-right.css" layer(components);

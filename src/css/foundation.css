@@ -1,0 +1,53 @@
+/*
+ * Vendored from rising-depth/tokens/foundation.css — that's the canonical
+ * copy. Edit there and re-copy, don't diverge here without a reason (and
+ * if there's a reason, that's an escape hatch — see rising-depth's plan).
+ *
+ * Foundation tokens (primitive tier)
+ *
+ * Raw building blocks: scale values with no meaning attached to any
+ * particular component. Components and themes never reference these
+ * directly for anything that varies by project (see contracts/button.md) —
+ * a semantic token file maps these into named roles like --button-radius.
+ *
+ * Deliberately no color primitives yet. Color is the thing most likely to
+ * be entirely project-specific (brand identity), so it's left to each
+ * project's own tokens rather than invented here speculatively. Add color
+ * primitives later only if a real second project shows a genuine shared
+ * need (e.g. a neutral gray scale used the same way everywhere).
+ */
+
+:root {
+  /* spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* radius scale */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* font size scale */
+  --font-size-1: 0.75rem;
+  --font-size-2: 0.875rem;
+  --font-size-3: 1rem;
+  --font-size-4: 1.125rem;
+  --font-size-5: 1.25rem;
+  --font-size-6: 1.5rem;
+
+  /* font weight */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* motion */
+  --duration-fast: 100ms;
+  --duration-base: 200ms;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+}
