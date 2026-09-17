@@ -149,12 +149,15 @@
     padding: 0;
   }
 
+  /*
+   * Border and shadow used to be declared here directly; they now come
+   * from the shared .card class (also applied to this element in
+   * index.html) via --card-border-color and --card-shadow in
+   * portfolio-theme.css. This rule only keeps the layout-specific
+   * properties that aren't part of the Card contract.
+   */
   .projects__project-list-item {
     margin: 2rem;
-    -webkit-box-shadow: 5px 5px 28px 5px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 5px 5px 28px 5px rgba(0, 0, 0, 0.1);
-    box-shadow: 5px 5px 28px 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid var(--light-border);
     display: flex;
     flex-direction: column;
   }

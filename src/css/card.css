@@ -1,0 +1,24 @@
+/*
+ * Vendored from rising-depth/styles/card.css — that's the canonical
+ * copy. Edit there and re-copy, don't diverge here without a reason (and
+ * if there's a reason, that's an escape hatch — see rising-depth's plan).
+ *
+ * Card (shared presentational component)
+ *
+ * Deliberately minimal: Card only owns the "raised surface" properties —
+ * border, radius, elevation (shadow), background, padding — as a shell.
+ * It does not prescribe internal layout (media + body slots, grids,
+ * split backgrounds, etc.) because the first real consumer's card layout
+ * (a two-column split with different backgrounds per side) is specific
+ * enough that forcing it into a shared contract now would be designing
+ * from one example. See contracts/card.md for why every token here is
+ * optional, unlike Button's.
+ */
+
+.card {
+  border-radius: var(--card-radius, 0);
+  border: var(--card-border-width, 1px) solid var(--card-border-color, transparent);
+  box-shadow: var(--card-shadow, none);
+  background: var(--card-bg, transparent);
+  padding: var(--card-padding, 0);
+}

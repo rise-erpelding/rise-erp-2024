@@ -30,8 +30,8 @@
  *    foundation.css and portfolio-theme.css are vendored from the
  *    rising-depth shared component system (see that repo's plan.md and
  *    docs/ for why). foundation.css holds generic scale primitives;
- *    portfolio-theme.css maps shared component tokens (currently just
- *    Button's) onto this project's own colors defined below in
+ *    portfolio-theme.css maps shared component tokens (Button's and
+ *    Card's) onto this project's own colors defined below in
  *    settings.css. Load order matters here: portfolio-theme.css
  *    references custom properties from both files, so it must come last.
  */
@@ -68,10 +68,11 @@
  *    Specific UI components. This is where majority of our work takes place
  *    and our UI components are often composed of Objects and Components.
  *
- *    button.css is vendored from rising-depth/styles/button.css — see the
- *    note in section 1 above about where its tokens come from.
+ *    button.css and card.css are vendored from rising-depth/styles/ — see
+ *    the note in section 1 above about where their tokens come from.
  */
 @import "./button.css" layer(components);
+@import "./card.css" layer(components);
 @import "./components-body.css" layer(components);
 @import "./components-left.css" layer(components);
 @import "./components-right.css" layer(components);

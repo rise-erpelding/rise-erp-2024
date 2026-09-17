@@ -22,6 +22,11 @@
  * Load order requirement: this file must be imported after both
  * foundation.css and the project's own settings.css, since it references
  * custom properties defined in each.
+ *
+ * Card tokens here reproduce the visual treatment the portfolio's project
+ * cards already had (border, shadow, sharp corners) before Card existed
+ * as a shared component — see docs/milestone-02-card.md for why matching
+ * the existing look exactly was the goal, not a redesign opportunity.
  */
 
 :root {
@@ -38,4 +43,8 @@
   --button-secondary-fg: var(--medium-primary);
   --button-secondary-border-color: var(--medium-primary);
   --button-secondary-bg-hover: var(--medium-background);
+
+  --card-radius: 0;
+  --card-border-color: var(--light-border);
+  --card-shadow: 5px 5px 28px 5px rgba(0, 0, 0, 0.1);
 }
