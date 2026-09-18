@@ -1,0 +1,70 @@
+@layer components {
+  .rail {
+    position: fixed;
+    left: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .rail__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: rgba(var(--fg-rgb), 0.55);
+    font-size: 12.5px;
+    letter-spacing: 0.01em;
+  }
+
+  .rail__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(var(--fg-rgb), 0.35);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .rail__label {
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .rail__item:hover .rail__label {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .rail__item:hover .rail__dot {
+    background: var(--accent);
+    box-shadow: 0 0 10px rgba(var(--fg-rgb), 0.3);
+  }
+
+  /* below the rail breakpoint there's no room for a fixed side rail —
+     fall back to a plain horizontal nav bar so navigation never disappears */
+  @media (max-width: 860px) {
+    .rail {
+      position: relative;
+      z-index: 1;
+      transform: none;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 16px 22px;
+      padding: 20px 24px;
+    }
+
+    .rail__dot {
+      display: none;
+    }
+
+    .rail__label {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

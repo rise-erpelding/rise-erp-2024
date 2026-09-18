@@ -9,242 +9,270 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Roboto+Condensed:wght@100;400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/base.css" />
   <script type="module" src="app.js"></script>
 </head>
 
 <body>
+  <div class="atmosphere" aria-hidden="true">
+    <span class="atmosphere__blob atmosphere__blob--a"></span>
+    <span class="atmosphere__blob atmosphere__blob--b"></span>
+    <span class="atmosphere__blob atmosphere__blob--c"></span>
+    <span class="atmosphere__blob atmosphere__blob--d"></span>
+    <span class="atmosphere__grain"></span>
+  </div>
+
   <header>
-    <nav aria-label="Section navigation">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <nav class="rail" aria-label="Section navigation">
+      <a href="#about" class="rail__item"><span class="rail__dot"></span><span class="rail__label">About</span></a>
+      <a href="#experience" class="rail__item"><span class="rail__dot"></span><span class="rail__label">Experience</span></a>
+      <a href="#projects" class="rail__item"><span class="rail__dot"></span><span class="rail__label">Projects</span></a>
+      <a href="#contact" class="rail__item"><span class="rail__dot"></span><span class="rail__label">Contact</span></a>
     </nav>
   </header>
 
-  <main>
-    <section id="hero">
-      <p>Full-stack developer</p>
-      <h1>Rise Erpelding</h1>
-      <p>Former K-12 educator, passionate about learning technologies and online learning.</p>
+  <main class="content">
+    <section id="hero" class="hero">
+      <p class="hero__eyebrow">Full-stack developer</p>
+      <h1 class="hero__name">Rise Erpelding</h1>
+      <p class="hero__tagline">Former K-12 educator, passionate about learning technologies and online learning.</p>
     </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <picture>
+    <section id="about" class="section about">
+      <h2 class="section__heading">About</h2>
+      <picture class="about__portrait">
         <source type="image/jpeg" srcset="images/self.jpeg?width=135 2x, images/self.jpeg?width=115" />
         <img src="images/self.jpeg?width=340" width="135" alt="picture of Rise" />
       </picture>
-      <p>My name is Rise, and the story of how I came to be a software developer usually goes something like this: I envied the kids who were good at math when I was in school, because (despite taking AP Calculus and passing the AP exam) I didn't think I was one of them. I studied sociology in college because I didn't think I'd do well at anything that required more math, but earned the highest grade in my college statistics class.</p>
-      <p>I found my way into education through teaching ESL in Japan, and upon returning to the US, made my first steps into the STEM career that I secretly always wanted when I became certified to teach high school math. I worked my way up to a teaching position and taught my students Geometry, AP Statistics, and that their self-perceived weakness in math, or anything else, shouldn't hold them back from the careers they wanted.</p>
-      <p>Meanwhile, when working up to that teaching position, I'd started working in a computer lab with students taking online classes, and saw the potentials and pitfalls of online learning, so I pursued a master's degree in online instructional design at Florida State University. This, in turn, piqued my interest in the technology powering online learning, and I went to coding bootcamp to learn how to code.</p>
-      <p>I have been working in software development professionally since 2020 and have worked with a variety of technologies since then, including JavaScript, React, HTML, CSS, Go, PHP, and more. Known for my attention to detail and strong communication skills, I excel at writing PR validation instructions and Jira cards and providing great feedback. I also love QA and relish the opportunity to find (and squash!) a bug.</p>
-      <p>On a personal level, I'm a military spouse, a mom, an avid runner, a piano player, and have a 1300+ day streak on Duolingo. I've called 4 US states and 2 countries outside of the US home in my lifetime and have been known to happy dance while eating.</p>
-      <p>You can view my work on GitHub, find me on LinkedIn, or email me &mdash; see the contact section below for links.</p>
+      <div class="about__body">
+        <p>My name is Rise, and the story of how I came to be a software developer usually goes something like this: I envied the kids who were good at math when I was in school, because (despite taking AP Calculus and passing the AP exam) I didn't think I was one of them. I studied sociology in college because I didn't think I'd do well at anything that required more math, but earned the highest grade in my college statistics class.</p>
+        <p>I found my way into education through teaching ESL in Japan, and upon returning to the US, made my first steps into the STEM career that I secretly always wanted when I became certified to teach high school math. I worked my way up to a teaching position and taught my students Geometry, AP Statistics, and that their self-perceived weakness in math, or anything else, shouldn't hold them back from the careers they wanted.</p>
+        <p>Meanwhile, when working up to that teaching position, I'd started working in a computer lab with students taking online classes, and saw the potentials and pitfalls of online learning, so I pursued a master's degree in online instructional design at Florida State University. This, in turn, piqued my interest in the technology powering online learning, and I went to coding bootcamp to learn how to code.</p>
+        <p>I have been working in software development professionally since 2020 and have worked with a variety of technologies since then, including JavaScript, React, HTML, CSS, Go, PHP, and more. Known for my attention to detail and strong communication skills, I excel at writing PR validation instructions and Jira cards and providing great feedback. I also love QA and relish the opportunity to find (and squash!) a bug.</p>
+        <p>On a personal level, I'm a military spouse, a mom, an avid runner, a piano player, and have a 1300+ day streak on Duolingo. I've called 4 US states and 2 countries outside of the US home in my lifetime and have been known to happy dance while eating.</p>
+        <p>You can view my work on GitHub, find me on LinkedIn, or email me &mdash; see the contact section below for links.</p>
+      </div>
     </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
+    <section id="experience" class="section experience">
+      <h2 class="section__heading">Experience</h2>
 
-      <h3>Technical Experience</h3>
-      <ul>
-        <li>
-          <p>Implemented major redesign for global retailer's ecommerce product landing page, increasing engagement by over 25% and "Add to Cart" rate by 5%; debugged longstanding issues in production and development environments; initiated Storybook site to display and document components specific to the product landing page.</p>
-          <ul>
-            <li><img src="images/tech-svgs/react.svg" width="24" alt="React logo" title="React" /></li>
-            <li><img src="images/tech-svgs/javascript.svg" width="24" alt="JavaScript logo" title="JavaScript" /></li>
-            <li><img src="images/tech-svgs/typescript.svg" width="24" alt="TypeScript logo" title="TypeScript" /></li>
-            <li><img src="images/tech-svgs/emotion.png" width="24" alt="Emotion logo" title="Emotion" /></li>
-            <li><img src="images/tech-svgs/storybook.svg" width="24" alt="Storybook logo" title="Storybook" /></li>
-            <li><img src="images/tech-svgs/jenkins.svg" width="24" alt="Jenkins logo" title="Jenkins" /></li>
-          </ul>
-        </li>
-        <li>
-          <p>Developed mobile app to store and send vehicle maintenance data.</p>
-          <ul>
-            <li><img src="images/tech-svgs/javascript.svg" width="24" alt="JavaScript logo" title="JavaScript" /></li>
-            <li><img src="images/tech-svgs/typescript.svg" width="24" alt="TypeScript logo" title="TypeScript" /></li>
-            <li><img src="images/tech-svgs/react-native.svg" width="24" alt="React Native logo" title="React Native" /></li>
-            <li><img src="images/tech-svgs/expo.svg" width="24" alt="Expo logo" title="Expo" /></li>
-            <li><img src="images/tech-svgs/redux.svg" width="24" alt="Redux logo" title="Redux" /></li>
-          </ul>
-        </li>
-        <li>
-          <p>Migrated 700+ news pages, 200+ faculty pages, and multiple other page and content types from Drupal to WordPress for a higher education organization.</p>
-          <ul>
-            <li><img src="images/tech-svgs/wordpress.svg" width="24" alt="WordPress logo" title="WordPress" /></li>
-            <li><img src="images/tech-svgs/symfony.svg" width="24" alt="Symfony logo" title="Twig (Symfony)" /></li>
-            <li><img src="images/tech-svgs/php.svg" width="24" alt="PHP logo" title="PHP" /></li>
-            <li><img src="images/tech-svgs/javascript.svg" width="24" alt="JavaScript logo" title="JavaScript" /></li>
-            <li><img src="images/tech-svgs/sass.svg" width="24" alt="Sass logo" title="Sass/SCSS" /></li>
-          </ul>
-        </li>
-        <li>
-          <p>Programmed Slack app to send customizable weekly Slack message to employees containing project forecast data.</p>
-          <ul>
-            <li><img src="images/tech-svgs/golang.svg" width="24" alt="Golang logo" title="Golang" /></li>
-            <li><img src="images/tech-svgs/docker.svg" width="24" alt="Docker logo" title="Docker" /></li>
-            <li><img src="images/tech-svgs/slack.svg" width="24" alt="Slack logo" title="Slack API" /></li>
-          </ul>
-        </li>
-        <li>
-          <p>Developed front-end app to retrieve quotable content from Slack.</p>
-          <ul>
-            <li><img src="images/tech-svgs/express.svg" width="24" alt="Express logo" title="Express" /></li>
-            <li><img src="images/tech-svgs/javascript.svg" width="24" alt="JavaScript logo" title="JavaScript" /></li>
-            <li><img src="images/tech-svgs/pugjs.svg" width="24" alt="Pug logo" title="Pug JS" /></li>
-            <li><img src="images/tech-svgs/sass.svg" width="24" alt="Sass logo" title="Sass/SCSS" /></li>
-          </ul>
-        </li>
-        <li>Also, see a few of my <a href="#projects">Personal Projects</a>, as well as my <a href="https://www.github.com/rise-erpelding">GitHub account</a>.</li>
-      </ul>
+      <div class="experience-group">
+        <h3 class="experience-group__heading">Technical Experience</h3>
+        <ul class="experience-list delist">
+          <li class="experience-item">
+            <p>Implemented major redesign for global retailer's ecommerce product landing page, increasing engagement by over 25% and "Add to Cart" rate by 5%; debugged longstanding issues in production and development environments; initiated Storybook site to display and document components specific to the product landing page.</p>
+            <ul class="experience-item__stack delist">
+              <li><img src="images/tech-svgs/react.svg" width="24" alt="React logo" title="React" /></li>
+              <li><img src="images/tech-svgs/javascript.svg" width="24" alt="JavaScript logo" title="JavaScript" /></li>
+              <li><img src="images/tech-svgs/typescript.svg" width="24" alt="TypeScript logo" title="TypeScript" /></li>
+              <li><img src="images/tech-svgs/emotion.png" width="24" alt="Emotion logo" title="Emotion" /></li>
+              <li><img src="images/tech-svgs/storybook.svg" width="24" alt="Storybook logo" title="Storybook" /></li>
+              <li><img src="images/tech-svgs/jenkins.svg" width="24" alt="Jenkins logo" title="Jenkins" /></li>
+            </ul>
+          </li>
+          <li class="experience-item">
+            <p>Developed mobile app to store and send vehicle maintenance data.</p>
+            <ul class="experience-item__stack delist">
+              <li><img src="images/tech-svgs/javascript.svg" width="24" alt="JavaScript logo" title="JavaScript" /></li>
+              <li><img src="images/tech-svgs/typescript.svg" width="24" alt="TypeScript logo" title="TypeScript" /></li>
+              <li><img src="images/tech-svgs/react-native.svg" width="24" alt="React Native logo" title="React Native" /></li>
+              <li><img src="images/tech-svgs/expo.svg" width="24" alt="Expo logo" title="Expo" /></li>
+              <li><img src="images/tech-svgs/redux.svg" width="24" alt="Redux logo" title="Redux" /></li>
+            </ul>
+          </li>
+          <li class="experience-item">
+            <p>Migrated 700+ news pages, 200+ faculty pages, and multiple other page and content types from Drupal to WordPress for a higher education organization.</p>
+            <ul class="experience-item__stack delist">
+              <li><img src="images/tech-svgs/wordpress.svg" width="24" alt="WordPress logo" title="WordPress" /></li>
+              <li><img src="images/tech-svgs/symfony.svg" width="24" alt="Symfony logo" title="Twig (Symfony)" /></li>
+              <li><img src="images/tech-svgs/php.svg" width="24" alt="PHP logo" title="PHP" /></li>
+              <li><img src="images/tech-svgs/javascript.svg" width="24" alt="JavaScript logo" title="JavaScript" /></li>
+              <li><img src="images/tech-svgs/sass.svg" width="24" alt="Sass logo" title="Sass/SCSS" /></li>
+            </ul>
+          </li>
+          <li class="experience-item">
+            <p>Programmed Slack app to send customizable weekly Slack message to employees containing project forecast data.</p>
+            <ul class="experience-item__stack delist">
+              <li><img src="images/tech-svgs/golang.svg" width="24" alt="Golang logo" title="Golang" /></li>
+              <li><img src="images/tech-svgs/docker.svg" width="24" alt="Docker logo" title="Docker" /></li>
+              <li><img src="images/tech-svgs/slack.svg" width="24" alt="Slack logo" title="Slack API" /></li>
+            </ul>
+          </li>
+          <li class="experience-item">
+            <p>Developed front-end app to retrieve quotable content from Slack.</p>
+            <ul class="experience-item__stack delist">
+              <li><img src="images/tech-svgs/express.svg" width="24" alt="Express logo" title="Express" /></li>
+              <li><img src="images/tech-svgs/javascript.svg" width="24" alt="JavaScript logo" title="JavaScript" /></li>
+              <li><img src="images/tech-svgs/pugjs.svg" width="24" alt="Pug logo" title="Pug JS" /></li>
+              <li><img src="images/tech-svgs/sass.svg" width="24" alt="Sass logo" title="Sass/SCSS" /></li>
+            </ul>
+          </li>
+          <li class="experience-item">Also, see a few of my <a href="#projects">Personal Projects</a>, as well as my <a href="https://www.github.com/rise-erpelding">GitHub account</a>.</li>
+        </ul>
+      </div>
 
-      <h3>Non-Technical Experience</h3>
-      <ul>
-        <li>
-          <h4>Mentorship</h4>
-          <p>Mentored apprentices in company's full-stack web developer apprenticeship program, holding weekly 1:1 meetings, reviewing code, and providing feedback about best professional and web development practices. Led and mentored military spouses to coordinate family outreach, fundraising, and social events for military active duty flying unit.</p>
-        </li>
-        <li>
-          <h4>Instructional Design</h4>
-          <p>Experience creating, launching, and maintaining instructional content in financial literacy and childbirth education.</p>
-        </li>
-        <li>
-          <h4>Teaching</h4>
-          <p>Developed and delivered high school and AP math curriculum, maintaining communication with students, parents, administrators, and guidance counselors, accommodating student needs.</p>
-        </li>
-      </ul>
+      <div class="experience-group">
+        <h3 class="experience-group__heading">Non-Technical Experience</h3>
+        <ul class="experience-list delist">
+          <li class="experience-item">
+            <h4 class="experience-item__title">Mentorship</h4>
+            <p>Mentored apprentices in company's full-stack web developer apprenticeship program, holding weekly 1:1 meetings, reviewing code, and providing feedback about best professional and web development practices. Led and mentored military spouses to coordinate family outreach, fundraising, and social events for military active duty flying unit.</p>
+          </li>
+          <li class="experience-item">
+            <h4 class="experience-item__title">Instructional Design</h4>
+            <p>Experience creating, launching, and maintaining instructional content in financial literacy and childbirth education.</p>
+          </li>
+          <li class="experience-item">
+            <h4 class="experience-item__title">Teaching</h4>
+            <p>Developed and delivered high school and AP math curriculum, maintaining communication with students, parents, administrators, and guidance counselors, accommodating student needs.</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <h3>My Portfolio</h3>
-          <ul>
+    <section id="projects" class="section projects">
+      <h2 class="section__heading">Projects</h2>
+      <ul class="project-list delist">
+        <li class="project">
+          <h3 class="project__name">My Portfolio</h3>
+          <ul class="project__links delist">
             <li><a href="#hero">Live app</a></li>
             <li><a href="https://github.com/rise-erpelding/rise-erp-2024">GitHub repo</a></li>
           </ul>
-          <p>My <a href="https://github.com/rise-erpelding/portfolio-2020">last portfolio site</a> used React, which was a bit much for something so simple. This one eliminates the routing of the previous version and keeps things simple, using Parcel to bundle files.</p>
-          <ul>
+          <p class="project__description">My <a href="https://github.com/rise-erpelding/portfolio-2020">last portfolio site</a> used React, which was a bit much for something so simple. This one eliminates the routing of the previous version and keeps things simple, using Parcel to bundle files.</p>
+          <ul class="project__stack delist">
             <li><img src="images/tech-svgs/parcel.png" width="24" alt="Parcel logo" title="Parcel" /></li>
             <li><img src="images/tech-svgs/html.svg" width="24" alt="HTML logo" title="HTML" /></li>
             <li><img src="images/tech-svgs/sass.svg" width="24" alt="Sass logo" title="Sass" /></li>
           </ul>
-          <img src="images/portfolio.png" alt="alt" />
+          <div class="project__media">
+            <img src="images/portfolio.png" alt="alt" />
+          </div>
         </li>
-        <li>
-          <h3>Password Generator</h3>
-          <ul>
+        <li class="project">
+          <h3 class="project__name">Password Generator</h3>
+          <ul class="project__links delist">
             <li><a href="https://clever-puppy-3e63cb.netlify.app/">Live app</a></li>
             <li><a href="https://github.com/rise-erpelding/password-generator">GitHub repo</a></li>
           </ul>
-          <p>Built with Solid.js, this password generator app allows users to generate passwords with length and character requirements of their choosing.</p>
-          <ul>
+          <p class="project__description">Built with Solid.js, this password generator app allows users to generate passwords with length and character requirements of their choosing.</p>
+          <ul class="project__stack delist">
             <li><img src="images/tech-svgs/solid.svg" width="24" alt="Solid.js logo" title="Solid.js" /></li>
             <li><img src="images/tech-svgs/typescript.svg" width="24" alt="TypeScript logo" title="TypeScript" /></li>
             <li><img src="images/tech-svgs/sass.svg" width="24" alt="Sass logo" title="Sass" /></li>
           </ul>
-          <img src="images/passwordGenerator.gif" alt="alt" />
+          <div class="project__media">
+            <img src="images/passwordGenerator.gif" alt="alt" />
+          </div>
         </li>
-        <li>
-          <h3>Tiles!</h3>
-          <ul>
+        <li class="project">
+          <h3 class="project__name">Tiles!</h3>
+          <ul class="project__links delist">
             <li><a href="https://rise-erp-tiles.netlify.app/">Live app</a></li>
             <li><a href="https://github.com/rise-erpelding/color-grid-game">GitHub repo</a></li>
           </ul>
-          <p>Tiles! is an app that allows users to create a color grid by selecting 4 corner colors and a grid size. This creates a color grid that, at a distance, will resemble a gradient. Once the color grid is created, users can play a game in which the color tiles in the grid are scrambled and they must put them back in order.</p>
-          <ul>
+          <p class="project__description">Tiles! is an app that allows users to create a color grid by selecting 4 corner colors and a grid size. This creates a color grid that, at a distance, will resemble a gradient. Once the color grid is created, users can play a game in which the color tiles in the grid are scrambled and they must put them back in order.</p>
+          <ul class="project__stack delist">
             <li><img src="images/tech-svgs/parcel.png" width="24" alt="Parcel logo" title="Parcel" /></li>
             <li><img src="images/tech-svgs/html.svg" width="24" alt="HTML logo" title="HTML" /></li>
             <li><img src="images/tech-svgs/sass.svg" width="24" alt="Sass logo" title="Sass" /></li>
             <li><img src="images/tech-svgs/jest.svg" width="24" alt="Jest logo" title="Jest" /></li>
           </ul>
-          <img src="images/colorTiles.gif" alt="alt" />
+          <div class="project__media">
+            <img src="images/colorTiles.gif" alt="alt" />
+          </div>
         </li>
-        <li>
-          <h3>MixEd</h3>
-          <ul>
+        <li class="project">
+          <h3 class="project__name">MixEd</h3>
+          <ul class="project__links delist">
             <li><a href="https://mixed-app.vercel.app/">Live app</a></li>
             <li><a href="https://github.com/rise-erpelding/mixed-app">GitHub frontend repo</a></li>
             <li><a href="https://github.com/rise-erpelding/mixed-api">GitHub backend (API) repo</a></li>
           </ul>
-          <p>MixEd is a group generator app that allows teachers to create student groups, optionally using student data to help form groups. With the abilities to make any-sized groups based on any qualitative or quantitative attribute, save generated groups, and drag and drop student names to manually adjust groups as desired, this app can do many things for any teacher wishing to generate groups for their students. Use the sample data to get a feel for what the app can do!</p>
-          <p>Note: A portion of this project was hosted with Heroku free tier when it existed--therefore the app may no longer work as intended.</p>
-          <ul>
+          <p class="project__description">MixEd is a group generator app that allows teachers to create student groups, optionally using student data to help form groups. With the abilities to make any-sized groups based on any qualitative or quantitative attribute, save generated groups, and drag and drop student names to manually adjust groups as desired, this app can do many things for any teacher wishing to generate groups for their students. Use the sample data to get a feel for what the app can do!</p>
+          <p class="project__description">Note: A portion of this project was hosted with Heroku free tier when it existed--therefore the app may no longer work as intended.</p>
+          <ul class="project__stack delist">
             <li><img src="images/tech-svgs/react.svg" width="24" alt="React logo" title="React" /></li>
             <li><img src="images/tech-svgs/css3.svg" width="24" alt="CSS logo" title="CSS" /></li>
             <li><img src="images/tech-svgs/postgresql.svg" width="24" alt="PostgreSQL logo" title="PostgreSQL" /></li>
             <li><img src="images/tech-svgs/nodejs.svg" width="24" alt="NodeJS logo" title="NodeJS" /></li>
             <li><img src="images/tech-svgs/express.svg" width="24" alt="Express logo" title="Express" /></li>
           </ul>
-          <img src="images/mixEdMobile.gif" alt="alt" />
-          <img src="images/mixEd.gif" alt="alt" />
+          <div class="project__media">
+            <img src="images/mixEdMobile.gif" alt="alt" />
+            <img src="images/mixEd.gif" alt="alt" />
+          </div>
         </li>
-        <li>
-          <h3>FarmPicks</h3>
-          <ul>
+        <li class="project">
+          <h3 class="project__name">FarmPicks</h3>
+          <ul class="project__links delist">
             <li><a href="https://farmpicks.vercel.app/">Live app</a></li>
             <li><a href="https://github.com/rise-erpelding/farmpicks-client">GitHub frontend repo</a></li>
             <li><a href="https://github.com/rise-erpelding/farmpicks-server">GitHub backend (API) repo</a></li>
           </ul>
-          <p>FarmPicks is a platform with user-generated content for users seeking information about local farms to search and browse farms. Users can save farms to their favorites to revisit later, and be part of the community effort to improve existing information about farms.</p>
-          <p>Note: A portion of this project was hosted with Heroku free tier when it existed--therefore the app may no longer work as intended.</p>
-          <ul>
+          <p class="project__description">FarmPicks is a platform with user-generated content for users seeking information about local farms to search and browse farms. Users can save farms to their favorites to revisit later, and be part of the community effort to improve existing information about farms.</p>
+          <p class="project__description">Note: A portion of this project was hosted with Heroku free tier when it existed--therefore the app may no longer work as intended.</p>
+          <ul class="project__stack delist">
             <li><img src="images/tech-svgs/react.svg" width="24" alt="React logo" title="React" /></li>
             <li><img src="images/tech-svgs/css3.svg" width="24" alt="CSS logo" title="CSS" /></li>
             <li><img src="images/tech-svgs/postgresql.svg" width="24" alt="PostgreSQL logo" title="PostgreSQL" /></li>
             <li><img src="images/tech-svgs/nodejs.svg" width="24" alt="NodeJS logo" title="NodeJS" /></li>
             <li><img src="images/tech-svgs/express.svg" width="24" alt="Express logo" title="Express" /></li>
           </ul>
-          <img src="images/farmpicksMobile.gif" alt="alt" />
-          <img src="images/farmpicks.gif" alt="alt" />
+          <div class="project__media">
+            <img src="images/farmpicksMobile.gif" alt="alt" />
+            <img src="images/farmpicks.gif" alt="alt" />
+          </div>
         </li>
-        <li>
-          <h3>Rabbit Hole</h3>
-          <ul>
+        <li class="project">
+          <h3 class="project__name">Rabbit Hole</h3>
+          <ul class="project__links delist">
             <li><a href="https://rise-erpelding.github.io/rabbit-hole/">Live app</a></li>
             <li><a href="https://github.com/rise-erpelding/rabbit-hole">GitHub repo</a></li>
           </ul>
-          <p>Rabbit Hole is a search engine that allows podcast listeners to find educational podcasts, listen to them, and see links to Wikipedia articles that may be related. Users also have the option to search Wikipedia or click on links to other wikipedia articles inside the app, allowing for a user experience akin to "falling down a rabbit hole."</p>
-          <ul>
+          <p class="project__description">Rabbit Hole is a search engine that allows podcast listeners to find educational podcasts, listen to them, and see links to Wikipedia articles that may be related. Users also have the option to search Wikipedia or click on links to other wikipedia articles inside the app, allowing for a user experience akin to "falling down a rabbit hole."</p>
+          <ul class="project__stack delist">
             <li><img src="images/tech-svgs/jquery.svg" width="24" alt="jQuery logo" title="React" /></li>
             <li><img src="images/tech-svgs/html.svg" width="24" alt="HTML logo" title="HTML" /></li>
             <li><img src="images/tech-svgs/css3.svg" width="24" alt="CSS logo" title="CSS" /></li>
           </ul>
-          <img src="images/rabbitHoleMobile.gif" alt="alt" />
-          <img src="images/rabbitHole.gif" alt="alt" />
+          <div class="project__media">
+            <img src="images/rabbitHoleMobile.gif" alt="alt" />
+            <img src="images/rabbitHole.gif" alt="alt" />
+          </div>
         </li>
-        <li>
-          <h3>GRE Quiz App</h3>
-          <ul>
+        <li class="project">
+          <h3 class="project__name">GRE Quiz App</h3>
+          <ul class="project__links delist">
             <li><a href="https://rise-erpelding.github.io/jquery-quiz-app/">Live app</a></li>
             <li><a href="https://github.com/rise-erpelding/jquery-quiz-app">GitHub repo</a></li>
           </ul>
-          <p>This is a quiz app built using jQuery. Intended for aspiring graduate students studying for the GRE, the app tests users' knowledge of GRE vocabulary words via multiple-choice questions, giving examples of the words in a context similar to what a user might encounter in graduate-level studies.</p>
-          <ul>
+          <p class="project__description">This is a quiz app built using jQuery. Intended for aspiring graduate students studying for the GRE, the app tests users' knowledge of GRE vocabulary words via multiple-choice questions, giving examples of the words in a context similar to what a user might encounter in graduate-level studies.</p>
+          <ul class="project__stack delist">
             <li><img src="images/tech-svgs/jquery.svg" width="24" alt="jQuery logo" title="React" /></li>
             <li><img src="images/tech-svgs/html.svg" width="24" alt="HTML logo" title="HTML" /></li>
             <li><img src="images/tech-svgs/css3.svg" width="24" alt="CSS logo" title="CSS" /></li>
           </ul>
-          <img src="images/greQuizApp.gif" alt="alt" />
+          <div class="project__media">
+            <img src="images/greQuizApp.gif" alt="alt" />
+          </div>
         </li>
       </ul>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <a href="mailto:rise.erpelding@gmail.com">rise.erpelding@gmail.com</a>
-      <ul>
+    <section id="contact" class="section contact">
+      <h2 class="section__heading">Contact</h2>
+      <a class="contact__email" href="mailto:rise.erpelding@gmail.com">rise.erpelding@gmail.com</a>
+      <ul class="contact__links delist">
         <li><a href="https://github.com/rise-erpelding" target="_blank">GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/riseerpelding/" target="_blank">LinkedIn</a></li>
       </ul>
     </section>
 
-    <footer>
+    <footer class="footer">
       <span>Rise Erpelding</span>
     </footer>
   </main>

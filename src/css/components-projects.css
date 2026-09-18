@@ -1,0 +1,78 @@
+@layer components {
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .project {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(var(--fg-rgb), 0.12);
+  }
+
+  .project:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .project__name {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 1.7rem;
+    margin: 0 0 10px;
+    color: var(--heading);
+  }
+
+  .project__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin: 0 0 14px;
+    font-size: 13px;
+  }
+
+  .project__links a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  .project__links a:hover {
+    border-bottom-color: currentColor;
+  }
+
+  .project__description {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: rgba(var(--fg-rgb), 0.72);
+    max-width: 62ch;
+    margin: 0 0 12px;
+  }
+
+  .project__description:last-of-type {
+    margin-bottom: 16px;
+  }
+
+  .project__stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 20px;
+  }
+
+  .project__stack img {
+    opacity: 0.85;
+  }
+
+  .project__media {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .project__media img {
+    max-width: 320px;
+    border-radius: 8px;
+    border: 1px solid rgba(var(--fg-rgb), 0.14);
+  }
+}

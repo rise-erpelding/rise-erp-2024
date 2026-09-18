@@ -1,0 +1,14 @@
+@layer components {
+  .section {
+    margin-bottom: 14vh;
+    scroll-margin-top: 10vh;
+  }
+
+  .section__heading {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin: 0 0 2.4rem;
+    color: var(--heading);
+  }
+}

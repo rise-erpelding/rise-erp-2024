@@ -1,0 +1,26 @@
+@layer components {
+  .about__portrait {
+    display: block;
+    margin: 0 0 28px;
+  }
+
+  .about__portrait img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(var(--fg-rgb), 0.2);
+  }
+
+  .about__body p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: rgba(var(--fg-rgb), 0.85);
+    max-width: 62ch;
+    margin: 0 0 1.4rem;
+  }
+
+  .about__body p:last-child {
+    margin-bottom: 0;
+  }
+}

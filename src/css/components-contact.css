@@ -1,0 +1,39 @@
+@layer components {
+  .contact__email {
+    display: inline-block;
+    font-family: "Fraunces", serif;
+    font-size: clamp(1.4rem, 3.4vw, 2rem);
+    color: var(--heading);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(var(--fg-rgb), 0.3);
+    padding-bottom: 4px;
+    margin-bottom: 28px;
+  }
+
+  .contact__links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .contact__links a {
+    font-size: 14px;
+    color: rgba(var(--fg-rgb), 0.6);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  .contact__links a:hover {
+    color: var(--heading);
+    border-bottom-color: rgba(var(--fg-rgb), 0.4);
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6vh;
+    padding-top: 6vh;
+    border-top: 1px solid rgba(var(--fg-rgb), 0.1);
+    font-size: 12.5px;
+    color: rgba(var(--fg-rgb), 0.4);
+  }
+}

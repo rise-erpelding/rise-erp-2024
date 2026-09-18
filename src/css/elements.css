@@ -1,11 +1,25 @@
 @layer elements {
   body {
     margin: 0;
+    background: var(--bg);
+    color: rgba(var(--fg-rgb), 1);
+    font-family: "Inter", system-ui, sans-serif;
+    overflow-x: hidden;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
   /* smooth scrolling */
   html,
   body {
     scroll-behavior: smooth;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
   }
 }
