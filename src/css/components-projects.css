@@ -53,15 +53,8 @@
     margin-bottom: 16px;
   }
 
-  .project__stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 0 0 20px;
-  }
-
-  .project__stack img {
-    opacity: 0.85;
+  .project .tag-list {
+    margin-bottom: 20px;
   }
 
   .project__media {

@@ -51,14 +51,7 @@
     margin: 0 0 6px;
   }
 
-  .experience-item__stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  .experience-item .tag-list {
     margin-top: 4px;
-  }
-
-  .experience-item__stack img {
-    opacity: 0.85;
   }
 }

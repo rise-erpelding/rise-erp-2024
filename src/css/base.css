@@ -63,6 +63,7 @@
 @import "./components-rail.css" layer(components);
 @import "./components-hero.css" layer(components);
 @import "./components-section.css" layer(components);
+@import "./components-tags.css" layer(components);
 @import "./components-about.css" layer(components);
 @import "./components-experience.css" layer(components);
 @import "./components-projects.css" layer(components);
