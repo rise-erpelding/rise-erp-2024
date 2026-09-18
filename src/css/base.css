@@ -59,6 +59,7 @@
  *    and our UI components are often composed of Objects and Components.
  */
 @import "./components-atmosphere.css" layer(components);
+@import "./components-theme-toggle.css" layer(components);
 @import "./components-rail.css" layer(components);
 @import "./components-hero.css" layer(components);
 @import "./components-section.css" layer(components);

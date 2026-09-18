@@ -1,29 +1,26 @@
-function addAriaHiddenOnResize() {
-  // if screen size is 1200px or greater, add aria-hidden to mobile gif
-  // otherwise add aria-hidden to desktop gif
-  const mobileGifs = document.getElementsByClassName('projects__gif--mobile');
-  const desktopGifs = document.getElementsByClassName('projects__gif--desktop');
-  const windowWidth = window.innerWidth;
-  
-  for (var i = 0; i < mobileGifs.length; i++) {
-    var element = mobileGifs[i];
-    if (windowWidth >= 1200) {
-      element.setAttribute('aria-hidden', 'true');
-    } else {
-      element.removeAttribute('aria-hidden');
-    }
-  }
+// The initial theme is set by the inline script in <head> (before first paint).
+// This handles switching it afterwards.
+const root = document.documentElement;
+const themeToggle = document.querySelector('.theme-toggle');
 
-  for (var i = 0; i < desktopGifs.length; i++) {
-    var element = desktopGifs[i];
-    if (windowWidth >= 1200) {
-      element.removeAttribute('aria-hidden');
-    } else {
-      element.setAttribute('aria-hidden', 'true');
-    }
-  }
+function getTheme() {
+  return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
 }
 
-window.addEventListener('resize', addAriaHiddenOnResize);
+function updateToggleLabel() {
+  const next = getTheme() === 'dark' ? 'light' : 'dark';
+  themeToggle.setAttribute('aria-label', `Switch to ${next} mode`);
+}
 
-addAriaHiddenOnResize();
+themeToggle.addEventListener('click', () => {
+  const next = getTheme() === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  try {
+    localStorage.setItem('theme', next);
+  } catch (e) {
+    // storage unavailable (e.g. private mode) — the theme just won't persist
+  }
+  updateToggleLabel();
+});
+
+updateToggleLabel();

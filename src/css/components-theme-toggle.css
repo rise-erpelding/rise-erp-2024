@@ -1,0 +1,36 @@
+@layer components {
+  .theme-toggle {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 10;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 999px;
+    border: 1px solid rgba(var(--fg-rgb), 0.18);
+    background: rgba(var(--fg-rgb), 0.06);
+    color: rgba(var(--fg-rgb), 0.75);
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .theme-toggle:hover {
+    background: rgba(var(--fg-rgb), 0.12);
+    color: var(--heading);
+  }
+
+  .theme-toggle:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  /* the icon shown is the mode you'll switch to; dark is the default */
+  :root[data-theme="light"] .theme-toggle__icon--sun,
+  :root:not([data-theme="light"]) .theme-toggle__icon--moon {
+    display: none;
+  }
+}
