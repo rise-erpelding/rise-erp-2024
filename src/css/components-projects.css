@@ -41,6 +41,46 @@
     border-bottom-color: currentColor;
   }
 
+  .project__toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    font-size: 13px;
+    color: rgba(var(--fg-rgb), 0.6);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .project__toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .project__toggle::after {
+    content: "+";
+    display: inline-block;
+    font-size: 15px;
+    transition: transform 0.2s ease;
+  }
+
+  .project__details[open] .project__toggle::after {
+    transform: rotate(45deg);
+  }
+
+  .project__toggle:hover {
+    color: var(--heading);
+  }
+
+  .project__toggle:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  .project__body {
+    padding-top: 16px;
+  }
+
   .project__description {
     font-size: 0.98rem;
     line-height: 1.7;
